@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\Mahasiswa;
+use PDF;
 
 class MahasiswaController extends Controller
 {
@@ -88,5 +89,12 @@ class MahasiswaController extends Controller
         $mahasiswa->delete();
 
         return redirect()->route('mahasiswa.index')->with('success', 'data berhasil dihapus!');
+    }
+
+    public function exportPDF()
+    {
+        $mahasiswa = Mahasiswa::all();
+        $pdf = PDF::loadView('mahasiswa.pdf', compact('mahasiswa'));
+        return $pdf->download('daftar-mahasiswa.pdf');
     }
 }

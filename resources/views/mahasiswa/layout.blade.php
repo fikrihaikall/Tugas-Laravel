@@ -6,6 +6,29 @@
    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
 </head>
 <body>
+   <nav class="navbar navbar-expand-lg navbar-light bg-light">
+      <div class="container">
+         <a class="navbar-brand" href="#">Fikri Haikal</a>
+         <div class="collapse navbar-collapse">
+            <!-- <ul class="navbar-nav mr-auto">
+               <li class="nav-item">
+                  <a class="nav-link" href="#">Home</a>
+               </li>
+               <li class="nav-item">
+                  <a class="nav-link" href="#">Profile</a>
+               </li>
+            </ul> -->
+            <ul class="navbar-nav ms-auto">
+               <li class="nav-item">
+                  <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: inline;">
+                     @csrf
+                     <button type="submit" class="nav-link btn btn-link">Logout</button>
+                  </form>
+               </li>
+            </ul>
+         </div>
+      </div>
+   </nav>
    <div class="container">
       @yield('content')
    </div>

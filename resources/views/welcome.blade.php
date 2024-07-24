@@ -40,11 +40,11 @@
 
                 <div class="mt-16">
                     <div class="fs-1 font-semibold text-gray-600 hover:text-gray-900 dark:text-gray-400 dark:hover:text-white focus:outline focus:outline-2 focus:rounded-sm focus:outline-red-500">
-                        Hello World
+                        <a href="{{ route('mahasiswa.index') }}">Table Mahasiswa</a>
                     </div>
-                    <div class="mt-4 text-gray-600 hover:text-gray-900 dark:text-gray-400 dark:hover:text-white focus:outline focus:outline-2 focus:rounded-sm focus:outline-red-500">
-                        &#169; Fikri Haikal
-                    </div>
+                </div>
+                <div class="mt-4 text-gray-600 hover:text-gray-900 dark:text-gray-400 dark:hover:text-white focus:outline focus:outline-2 focus:rounded-sm focus:outline-red-500">
+                    &#169; Fikri Haikal
                 </div>
             </div>
         </div>

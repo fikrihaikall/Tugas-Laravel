@@ -8,6 +8,7 @@
       </div>
       <div class="float-end">
          <a href="{{ route('mahasiswa.create') }}" class="btn btn-success">Create New Mahasiswa</a>
+         <a href="{{ route('mahasiswa.export.pdf') }}" class="btn btn-danger">Export PDF</a>
       </div>
    </div>
 </div>
